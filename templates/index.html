@@ -32,7 +32,7 @@
     <center><table id="table" style="table-layout: auto; width: 50%;" border="2">
 		<th>Players</th>
 		<th>Score</th>
-		<!--tr>
+		<tr>
 			<td><center>Aavinash &nbsp; &nbsp;<button id="add" value="+" onclick="add()">+</button></center></td>
 			<td><center><span id="score">0</span></center></td>
 		</tr>
@@ -95,14 +95,9 @@
 		<tr>
 			<td><center>Yagan <button id="add" value="+" onclick="add_15()">+</button></center></td>
 			<td><center><span id="score_15">0</span></center></td>
-		</tr!-->
-		<tbody id="tbody"> 
-  
-        </tbody> 
+		</tr>
 	</table></center>
-	<input type = "text" id = "name"/>
-	<input type ="button"  value = "ADD TEAM" onclick="addrow()"></input>
-	{% endif %}
+    {% endif %}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script>
@@ -127,21 +122,7 @@
                 document.getElementById("chat").innerHTML+="<br>"+data;
             }
         })
-		var id;
-		function addrow()
-		{
-			var table = document.getElementById('table');
-			newrow = table.insertRow(table.length);
-			cell1 = newrow.insertCell(0);
-			cell2 = newrow.insertCell(1);
-			team_name = document.getElementById('name').value;
-			//cell1.innerHTML = team_name+'<input type = "button" class = "good1" id="button'+team_name+'"  value="+" onclick="add_15();"></button>';
-			cell1.innerHTML = team_name;
-			cell2.innerHTML = 0;
-			document.getElementById('name').value = '';
-		}
-		
-		
     </script>
 </body>
 </html>
+
